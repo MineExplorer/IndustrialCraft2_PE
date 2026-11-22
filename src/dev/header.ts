@@ -30,31 +30,43 @@ const GUI_SCALE_NEW = 3;
 const fallVelocity = -0.0784;
 const ELECTRIC_ITEM_MAX_DAMAGE = 27;
 
-const INDEX_TO_COLOR = {
-	0: "black",
-	1: "red",
-	2: "green",
-	3: "brown",
-	4: "blue",
-	5: "purple",
-	6: "cyan",
-	7: "light_gray",
-	8: "gray",
-	9: "pink",
-	10: "lime",
-	11: "yellow",
-	12: "light_blue",
-	13: "magenta",
-	14: "orange",
-	15: "white"
-}
-
 // import values
 const Color = android.graphics.Color;
 const PotionEffect = Native.PotionEffect;
 const ParticleType = Native.ParticleType;
 const BlockSide = Native.BlockSide;
 const EntityType = Native.EntityType;
+
+// reverse compatibility for Inner Core 2.4.0b122
+if (typeof EDamageCause === "undefined") {
+    (globalThis as any).EDamageCause = {
+		GENERIC: 0,
+		CACTUS: 1,
+		MOB: 2,
+		IMPACT: 3,
+		IN_WALL: 4,
+		FALL: 5,
+		IN_FIRE: 6,
+		ON_FIRE: 7,
+		LAVA: 8,
+		DROWN: 9,
+		EXPLOSION: 10,
+		MOB_EXPLOSION: 11,
+		OUT_OF_WORLD: 12,
+		COMMAND: 13,
+		MAGIC: 14,
+		WITHER: 15,
+		STARVE: 16,
+		ANVIL: 17,
+		THORNS: 18,
+		PROJECTILE: 19,
+		FALLING_BLOCK: 20,
+		FLY_INTO_WALL: 21,
+		MAGMA: 22,
+		FIREWORKS: 23,
+		LIGHTNING_BOLT: 24
+	};
+}
 
 // energy (Eu)
 const EU = EnergyTypeRegistry.assureEnergyType("Eu", 1);

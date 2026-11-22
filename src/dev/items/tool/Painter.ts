@@ -1,9 +1,28 @@
+const PAINTER_INDEX_TO_COLOR = {
+	0: "black",
+	1: "red",
+	2: "green",
+	3: "brown",
+	4: "blue",
+	5: "purple",
+	6: "cyan",
+	7: "light_gray",
+	8: "gray",
+	9: "pink",
+	10: "lime",
+	11: "yellow",
+	12: "light_blue",
+	13: "magenta",
+	14: "orange",
+	15: "white"
+}
+
 class ItemPainter extends ItemCommon {
 	readonly color: number;
 
 	constructor(colorIndex: number) {
 		const itemIndex = colorIndex + 1;
-		const color = INDEX_TO_COLOR[colorIndex];
+		const color = PAINTER_INDEX_TO_COLOR[colorIndex];
 		super("icPainter" + itemIndex, "painter." + color, {name: "ic_painter", meta: itemIndex});
 		this.setMaxStack(1);
 		this.setMaxDamage(16);

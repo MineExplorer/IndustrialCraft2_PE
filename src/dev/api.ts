@@ -188,6 +188,7 @@
         densePlateCopper: number,
         densePlateGold: number,
         densePlateIron: number,
+        densePlateLapis: number,
         densePlateLead: number,
         densePlateSilver: number,
         densePlateSteel: number,

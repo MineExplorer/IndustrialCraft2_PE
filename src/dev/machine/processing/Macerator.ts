@@ -69,6 +69,7 @@ Callback.addCallback("PreLoaded", function() {
 	dictionary.addRecipe({id: ItemID.densePlateSteel}, {id: ItemID.dustSteel, count: 9}, 400);
 	dictionary.addRecipe({id: ItemID.densePlateLead}, {id: ItemID.dustLead, count: 9}, 400);
 	dictionary.addRecipe({id: ItemID.densePlateSilver}, {id: ItemID.dustSilver, count: 9}, 400);
+	dictionary.addRecipe({id: ItemID.densePlateLapis}, {id: ItemID.dustLapis, count: 9}, 400);
 
 	// casings
 	dictionary.addRecipe({id: ItemID.casingIron}, {id: ItemID.dustSmallIron, count: 4}, 100);

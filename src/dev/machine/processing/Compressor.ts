@@ -53,6 +53,7 @@ Callback.addCallback("PreLoaded", function() {
 	dictionary.addRecipe({id: ItemID.plateSteel, count: 9}, {id: ItemID.densePlateSteel, count: 1});
 	dictionary.addRecipe({id: ItemID.plateLead, count: 9}, {id: ItemID.densePlateLead, count: 1});
 	dictionary.addRecipe({id: ItemID.plateSilver, count: 9}, {id: ItemID.densePlateSilver, count: 1});
+	dictionary.addRecipe({id: ItemID.plateLapis, count: 9}, {id: ItemID.densePlateLapis, count: 1});
 
 	// Compact
 	dictionary.addRecipe({id: VanillaItemID.redstone, count: 9}, {id: 152, count: 1});

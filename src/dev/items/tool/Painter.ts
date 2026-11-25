@@ -19,6 +19,20 @@ const PAINTER_INDEX_TO_COLOR = {
 
 class ItemPainter extends ItemCommon {
 	readonly color: number;
+	readonly painteableBlockIds = [
+		VanillaBlockID.hardened_clay,
+		VanillaBlockID.glass,
+		VanillaBlockID.glass_pane
+	]
+	readonly coloredBlockIds = [
+		VanillaBlockID.wool,
+		VanillaBlockID.carpet,
+		VanillaBlockID.stained_hardened_clay,
+		VanillaBlockID.stained_glass,
+		VanillaBlockID.stained_glass_pane,
+		VanillaBlockID.concrete,
+		237 // concrete_powder
+	];
 
 	constructor(colorIndex: number) {
 		const itemIndex = colorIndex + 1;
@@ -41,9 +55,10 @@ class ItemPainter extends ItemCommon {
 			}
 			EnergyGridBuilder.onWirePlaced(region, coords.x, coords.y, coords.z);
 			this.useItem(coords, item, player);
-		} else if (block.id == 35 && block.data != 15 - this.color){
+		}
+		else if (this.painteableBlockIds.includes(block.id) || this.coloredBlockIds.includes(block.id) && block.data != 15 - this.color) {
 			const region = BlockSource.getDefaultForActor(player);
-			region.setBlock(coords.x, coords.y, coords.z, 35, 15 - this.color);
+			region.setBlock(coords.x, coords.y, coords.z, block.id, 15 - this.color);
 			this.useItem(coords, item, player);
 		}
 	}

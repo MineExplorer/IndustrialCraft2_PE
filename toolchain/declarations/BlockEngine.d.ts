@@ -57,9 +57,11 @@ declare enum EnumRarity {
     EPIC = 3
 }
 declare enum MiningLevel {
-    STONE = 1,
-    IRON = 2,
-    DIAMOND = 3,
+    WOODEN = 1,
+    STONE = 2,
+    IRON = 3,
+    DIAMOND = 4,
+    /** @deprecated */
     OBSIDIAN = 4
 }
 /**
@@ -1458,7 +1460,7 @@ declare abstract class ItemBase {
 declare class ItemCommon extends ItemBase {
     constructor(stringID: string, name?: string, icon?: string | Item.TextureData, inCreative?: boolean);
 }
-declare type FoodParams = {
+type FoodParams = {
     food?: number;
     useDuration?: number;
     saturation?: "poor" | "low" | "normal" | "good" | "max" | "supernatural";
@@ -1524,12 +1526,12 @@ interface ArmorListeners {
      */
     onTakeOff?(item: ItemInstance, slot: number, player: number): void;
 }
-declare type ArmorMaterial = {
+type ArmorMaterial = {
     durabilityFactor: number;
     enchantability?: number;
     repairMaterial?: number;
 };
-declare type ArmorParams = {
+type ArmorParams = {
     type: ArmorType;
     defence: number;
     knockbackResistance?: number;

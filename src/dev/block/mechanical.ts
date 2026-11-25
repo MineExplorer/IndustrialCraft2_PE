@@ -2,8 +2,8 @@
 /// <reference path="./types/BlockMachine.ts" />
 
 BlockRegistry.registerBlock(new BlockMiningPipe("miningPipe", "mining_pipe"));
-BlockRegistry.registerBlock(new BlockMachine("machineBlockBasic", "machine_block", ["block_basic_machine", 0]));
-BlockRegistry.registerBlock(new BlockMachine("machineBlockAdvanced", "advanced_machine_block", ["block_advanced_machine", 0]));
+BlockRegistry.registerBlock(new BlockMachine("machineBlockBasic", "machine_block", ["block_basic_machine", 0], 5));
+BlockRegistry.registerBlock(new BlockMachine("machineBlockAdvanced", "advanced_machine_block", ["block_advanced_machine", 0], 8));
 
 Callback.addCallback("PreLoaded", function() {
 	Recipes.addShaped({id: BlockID.miningPipe, count: 8, data: 0}, [

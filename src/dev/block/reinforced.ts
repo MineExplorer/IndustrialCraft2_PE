@@ -4,13 +4,13 @@
 BlockRegistry.registerBlock(new BlockStone("reinforcedStone", "reinforced_stone", ["reinforced_stone", 0], 2, {
 	extends: "stone",
 	destroyTime: 25,
-	explosionResistance: 150,
+	explosionResistance: 180,
 }));
 
 BlockRegistry.registerBlock(new BlockStone("reinforcedGlass", "reinforced_glass", ["reinforced_glass", 0], 2, {
 	baseBlock: 1,
 	destroyTime: 25,
-	explosionResistance: 150,
+	explosionResistance: 180,
 	renderLayer: 1,
 	sound: "stone"
 }));

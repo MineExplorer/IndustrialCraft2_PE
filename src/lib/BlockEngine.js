@@ -32,7 +32,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 LIBRARY({
     name: "BlockEngine",
-    version: 14,
+    version: 15,
     shared: true,
     api: "CoreEngine"
 });
@@ -140,9 +140,11 @@ var EnumRarity;
 })(EnumRarity || (EnumRarity = {}));
 var MiningLevel;
 (function (MiningLevel) {
-    MiningLevel[MiningLevel["STONE"] = 1] = "STONE";
-    MiningLevel[MiningLevel["IRON"] = 2] = "IRON";
-    MiningLevel[MiningLevel["DIAMOND"] = 3] = "DIAMOND";
+    MiningLevel[MiningLevel["WOODEN"] = 1] = "WOODEN";
+    MiningLevel[MiningLevel["STONE"] = 2] = "STONE";
+    MiningLevel[MiningLevel["IRON"] = 3] = "IRON";
+    MiningLevel[MiningLevel["DIAMOND"] = 4] = "DIAMOND";
+    /** @deprecated */
     MiningLevel[MiningLevel["OBSIDIAN"] = 4] = "OBSIDIAN";
 })(MiningLevel || (MiningLevel = {}));
 /**
@@ -2404,9 +2406,8 @@ var ItemFood = /** @class */ (function (_super) {
     __extends(ItemFood, _super);
     function ItemFood(stringID, name, icon, params, inCreative) {
         if (inCreative === void 0) { inCreative = true; }
-        var _this = this;
         var _a;
-        _this = _super.call(this, stringID, name, icon) || this;
+        var _this = _super.call(this, stringID, name, icon) || this;
         var foodProperties = {
             nutrition: params.food || 0,
             saturation_modifier: params.saturation || "normal",

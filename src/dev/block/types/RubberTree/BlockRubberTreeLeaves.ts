@@ -18,7 +18,8 @@ class BlockRubberTreeLeaves extends BlockBase {
 			drop.push([BlockID.rubberTreeSapling, 1, 0]);
 		}
 		if (Math.random() < .02) {
-			drop.push([280, 1, 0]);
+			const count = Math.random() < 0.5 ? 1 : 2;
+			drop.push([280, count, 0]);
 		}
 		return drop;
 	}

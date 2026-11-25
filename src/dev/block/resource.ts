@@ -1,12 +1,12 @@
 /// <reference path="./types/BlockResource.ts" />
 
-BlockRegistry.registerBlock(new BlockResource("blockCopper", "copper", ["block_copper"], 2));
-BlockRegistry.registerBlock(new BlockResource("blockTin", "tin", ["block_tin"], 2));
-BlockRegistry.registerBlock(new BlockResource("blockBronze", "bronze", ["block_bronze"], 2));
-BlockRegistry.registerBlock(new BlockResource("blockLead", "lead", ["block_lead"], 2));
-BlockRegistry.registerBlock(new BlockResource("blockSteel", "steel", ["block_steel"], 2));
-BlockRegistry.registerBlock(new BlockResource("blockSilver", "silver", ["block_silver"], 3));
-BlockRegistry.registerBlock(new BlockResource("blockUranium", "uranium", ["block_uranium_top", "block_uranium_top", "block_uranium_side"], 3));
+BlockRegistry.registerBlock(new BlockResource("blockCopper", "copper", ["block_copper"], MiningLevel.STONE));
+BlockRegistry.registerBlock(new BlockResource("blockTin", "tin", ["block_tin"], MiningLevel.STONE));
+BlockRegistry.registerBlock(new BlockResource("blockBronze", "bronze", ["block_bronze"], MiningLevel.STONE, 5));
+BlockRegistry.registerBlock(new BlockResource("blockLead", "lead", ["block_lead"], MiningLevel.STONE));
+BlockRegistry.registerBlock(new BlockResource("blockSteel", "steel", ["block_steel"], MiningLevel.STONE, 8));
+BlockRegistry.registerBlock(new BlockResource("blockSilver", "silver", ["block_silver"], MiningLevel.IRON));
+BlockRegistry.registerBlock(new BlockResource("blockUranium", "uranium", ["block_uranium_top", "block_uranium_top", "block_uranium_side"], MiningLevel.IRON, 6));
 
 Item.addCreativeGroup("blockResource", Translation.translate("Resource Blocks"), [
 	BlockID.blockCopper,

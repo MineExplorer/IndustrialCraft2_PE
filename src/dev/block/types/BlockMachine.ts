@@ -1,9 +1,10 @@
 /// <reference path="./BlockStone.ts" />
 
 class BlockMachine extends BlockStone {
-	constructor(id: string, name: string, texture: [string, number] | [string, number][], miningLevel: number = 1) {
-		super(id, name, texture, miningLevel);
-		this.setDestroyTime(3);
+	constructor(id: string, name: string, texture: [string, number] | [string, number][], hardness: number) {
+		super(id, name, texture, MiningLevel.STONE);
+		this.setDestroyTime(hardness);
+		this.setExplosionResistance(10);
 	}
 }
 

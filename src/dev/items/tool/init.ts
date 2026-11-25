@@ -22,11 +22,11 @@
 /// <reference path="UpgradeMFSU.ts" />
 
 ItemRegistry.addToolMaterial("bronze", {
-	durability: 225,
+	durability: 300,
 	level: 3,
 	efficiency: 6,
 	damage: 2,
-	enchantability: 15,
+	enchantability: 13,
 	repairMaterial: ItemID.ingotBronze
 });
 

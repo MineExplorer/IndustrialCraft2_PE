@@ -8,7 +8,7 @@
 /// <reference path="ArmorQuantumSuit.ts" />
 /// <reference path="ArmorSolarHelmet.ts" />
 
-ItemRegistry.addArmorMaterial("bronze", {durabilityFactor: 14, enchantability: 10, repairMaterial: ItemID.ingotBronze});
+ItemRegistry.addArmorMaterial("bronze", {durabilityFactor: 18, enchantability: 8, repairMaterial: ItemID.ingotBronze});
 
 ItemRegistry.registerItem(new ArmorIC2("bronzeHelmet", "bronze_helmet", {type: "helmet", defence: 2, texture: "bronze", material: "bronze"}));
 ItemRegistry.registerItem(new ArmorIC2("bronzeChestplate", "bronze_chestplate", {type: "chestplate", defence: 6, texture: "bronze", material: "bronze"}));
